@@ -16,11 +16,12 @@ Installation in 10 simple steps
 3. Make sure that there's a file called `.htaccess`. If not create one containing this code:
     ```RewriteEngine On
 
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 
-	RewriteCond $1 !^(index\.php)
-	RewriteRule ^(.*)$ index.php/$1 [L]```
+RewriteCond $1 !^(index\.php)
+RewriteRule ^(.*)$ index.php/$1 [L]
+```
 
 4. Now open `app/config.ini` in your favourite text editor. Change the `site.url` variable to the location of index.php. For example: `http://example.com` or `http://example.com/folder/`. Just remember to include a trailing slash
 
