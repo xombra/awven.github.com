@@ -16,10 +16,8 @@ Installation in 10 simple steps
 3. Make sure that there's a file called `.htaccess`. If not create one containing this code:
 ```
 RewriteEngine On
-
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-
 RewriteCond $1 !^(index\.php)
 RewriteRule ^(.*)$ index.php/$1 [L]
 ```
