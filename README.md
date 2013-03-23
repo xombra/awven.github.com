@@ -29,7 +29,7 @@ RewriteRule ^(.*)$ index.php/$1 [L]
 6. Now open `app/views/layout.html.php`. You'll see some HTML code. Between the code `<!-- the sidebar-->` and `<!--End custom sidebar-->` you can add whatever you want. We've put a `<ul>` list in for you, but you can have anything!
 
 7. Now create you first post using Markdown. The syntax help is [here](http://daringfireball.net/projects/markdown/syntax). You *must* begin your document with 
-	#Title here
+`#Title here`
 otherwise it won't work!
 
 8. Call your file:
