@@ -73,7 +73,8 @@
         <li>
         <p>Make sure that there's a file called <code>.htaccess</code>. If not create one containing this code:</p>
 
-        <pre><code>RewriteEngine On
+        <pre><code>
+        RewriteEngine On
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteCond %{REQUEST_FILENAME} !-d
         RewriteCond $1 !^(index\.php)
