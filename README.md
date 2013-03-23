@@ -14,7 +14,8 @@ Installation in 10 simple steps
 
 2. Now you need to install the whole folder onto your *linux* webserver.
 3. Make sure that there's a file called `.htaccess`. If not create one containing this code:
-```RewriteEngine On
+```
+RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -37,3 +38,15 @@ otherwise it won't work!
 	YYYY-MM-DD_a-title.md
 9. Now refresh the page
 10. Your blog is complete!
+
+Credits
+-------
+Making light-blog wouldn't have been possible without (in no particular order...)
+* (PHP Markdown)[https://github.com/dflydev/dflydev-markdown]
+* (Composer)[http://getcomposer.org/]
+* (PHP RSS Writer) [https://github.com/suin/php-rss-writer]
+* (Dispatch) [http://noodlehaus.github.com/dispatch/]
+
+License
+-------
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB"><img alt="Creative Commons Licence" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
