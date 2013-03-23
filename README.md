@@ -39,11 +39,11 @@ otherwise it won't work!
 
 Credits
 -------
-Making light-blog wouldn't have been possible without (in no particular order...)
-* (PHP Markdown)[https://github.com/dflydev/dflydev-markdown]
-* (Composer)[http://getcomposer.org/]
-* (PHP RSS Writer) [https://github.com/suin/php-rss-writer]
-* (Dispatch) [http://noodlehaus.github.com/dispatch/]
+Making light blog wouldn't have been possible without (in no particular order...)
+* [PHP Markdown](https://github.com/dflydev/dflydev-markdown)
+* [Composer](http://getcomposer.org/)
+* [PHP RSS Writer](https://github.com/suin/php-rss-writer)
+* [Dispatch](http://noodlehaus.github.com/dispatch/)
 
 License
 -------
