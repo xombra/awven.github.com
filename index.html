@@ -1,112 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640" />
+    <meta charset="utf-8">
+    <title>light blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+    <!-- Le styles -->
+    <link href="//netdna.bootstrapcdn.com/bootswatch/2.3.1/cerulean/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
 
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
-    <title>Light Blog by SiteOctopus</title>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--[if IE 7]> 
+      <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome-ie7.css" rel="stylesheet">
+    <![endif]-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
   </head>
 
   <body>
-    <a id="forkme_banner" href="https://github.com/SiteOctopus/Light-Blog">View on GitHub</a>
-    <div class="shell">
 
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>Light Blog</h1>
-            <h2>A super light Markdown based blog</h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
-
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/SiteOctopus/Light-Blog/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/SiteOctopus/Light-Blog/tarball/master" class="tgz"><em>download</em> .TGZ</a>
-        </span>
-      </section>
-
-
-      <span class="banner-fix"></span>
-
-
-      <section id="main_content">
-        <h1>lightblog</h1>
-
-<p>Why use light blog over Wordpress or Drupal?
-1. It's simple
-2. It doesn't need a database
-4. It's lightweight
-5. No installation required, just drag and drop files</p>
-
-<h2>Installation in 10 simple steps</h2>
-
-<ol>
-<li><p>First of all get yourself a copy of the files by clicking <a href="https://github.com/SiteOctopus/Light-Blog/zipball/master">here (.zip)</a> or by git cloning</p></li>
-<li><p>Now you need to install the whole folder onto your <em>linux</em> webserver.</p></li>
-<li>
-<p>Make sure that there's a file called <code>.htaccess</code>. If not create one containing this code:</p>
-
-<pre><code>RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond $1 !^(index\.php)
-RewriteRule ^(.*)$ index.php/$1 [L]
-</code></pre>
-</li>
-<li><p>Now open <code>app/config.ini</code> in your favourite text editor. Change the <code>site.url</code> variable to the location of index.php. For example: <code>http://example.com</code> or <code>http://example.com/folder/</code>. Just remember to include a trailing slash</p></li>
-<li><p>Change the blog info to match your blog. Now save the file back onto your webserver</p></li>
-<li><p>Now open <code>app/views/layout.html.php</code>. You'll see some HTML code. Between the code <code>&lt;!-- the sidebar--&gt;</code> and <code>&lt;!--End custom sidebar--&gt;</code> you can add whatever you want. We've put a <code>&lt;ul&gt;</code> list in for you, but you can have anything!</p></li>
-<li><p>Now create you first post using Markdown. The syntax help is <a href="http://daringfireball.net/projects/markdown/syntax">here</a>. You <em>must</em> begin your document with 
-<code>#Title here</code>
-otherwise it won't work!</p></li>
-<li><p>Call your file:
-YYYY-MM-DD_a-title.md</p></li>
-<li><p>Now refresh the page</p></li>
-<li><p>Your blog is complete!</p></li>
-</ol><h2>Credits</h2>
-
-<p>Making light blog wouldn't have been possible without (in no particular order...)</p>
-
-<ul>
-<li><a href="https://github.com/dflydev/dflydev-markdown">PHP Markdown</a></li>
-<li><a href="http://getcomposer.org/">Composer</a></li>
-<li><a href="https://github.com/suin/php-rss-writer">PHP RSS Writer</a></li>
-<li><a href="http://noodlehaus.github.com/dispatch/">Dispatch</a></li>
-</ul><h2>License</h2>
-
-<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB"><img alt="Creative Commons Licence" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
-      </section>
-
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>this project by <a href="https://github.com/SiteOctopus">SiteOctopus</a> can be found on <a href="https://github.com/SiteOctopus/Light-Blog">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
-      </footer>
-
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">light blog</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="#get">Get it</a></li>
+              <li><a href="#customize">Customize</a></li>
+              <li><a href="#credits">Credits and License</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
     </div>
 
-    
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Database free blog</h1>
+        <p>light blog is a free <a href="http://daringfireball.net/projects/markdown/">Markdown</a> based blog. You write your posts in the simple markdown language and our clever php code does the rest!</p>
+        <p><a href="#get" class="btn btn-primary btn-large">Download &raquo;</a></p>
+      </div>
+      <hr />
+      <h1 id="get" name="get">Get it</h1>
+      <p>We have two downloads available:</p>
+      <ul>
+        <li><h3><a href="https://github.com/SiteOctopus/Light-Blog/zipball/master"><i class="icon-download"></i>.zip</a></h3></li>
+        <li><h3><a href="https://github.com/SiteOctopus/Light-Blog/tarball/master"><i class="icon-download"></i>.tar.gz </a></h3></li>
+      </ul>
+
+        <ol>
+        <li><p>Now you need to install the whole folder onto your <em>linux</em> webserver.</p></li>
+        <li>
+        <p>Make sure that there's a file called <code>.htaccess</code>. If not create one containing this code:</p>
+
+        <pre><code>RewriteEngine On
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteCond $1 !^(index\.php)
+        RewriteRule ^(.*)$ index.php/$1 [L]
+        </code></pre>
+        </li>
+        <li><p>Now open <code>app/config.ini</code> in your favourite text editor. Change the <code>site.url</code> variable to the location of index.php. For example: <code>http://example.com</code> or <code>http://example.com/folder/</code>. Just remember to include a trailing slash</p></li>
+        <li><p>Change the blog info to match your blog. Now save the file back onto your webserver</p></li>
+        <li><p>Now open <code>app/views/layout.html.php</code>. You'll see some HTML code. Between the code <code>&lt;!-- the sidebar--&gt;</code> and <code>&lt;!--End custom sidebar--&gt;</code> you can add whatever you want. We've put a <code>&lt;ul&gt;</code> list in for you, but you can have anything!</p></li>
+        <li><p>Now create you first post using Markdown. The syntax help is <a href="http://daringfireball.net/projects/markdown/syntax">here</a>. You <em>must</em> begin your document with 
+        <code>#Title here</code>
+        otherwise it won't work!</p></li>
+        <li><p>Call your file:
+        <code>YYYY-MM-DD_a-title.md</code></p></li>
+        <li><p>Now refresh the page</p></li>
+        <li><p>Your blog is complete!</p></li>
+        </ol>
+        <hr />
+        <h1 id="customize" name="customize">Customize</h1>
+        <h3>Customize sidebar</h3>
+        <p>Open <code>app/views/layout.html.php</code>. You'll see some HTML code. Between the code <code>&lt;!-- the sidebar--&gt;</code> and <code>&lt;!--End custom sidebar--&gt;</code> you can add whatever you want. We've put a <code>&lt;ul&gt;</code> list in for you, but you can have anything!</p>
+        <h3>Customize theme</h3>
+        <p>Open assets/css.style.css and make your changes there. If you write a really good theme let us know and we might add it to a theme chooser we are working on</p>
+        <hr />
+        <h1 id="credits">Credits and License</h1>
+
+        <p>Making light blog wouldn't have been possible without (in no particular order...)</p>
+
+        <ul>
+        <li><a href="https://github.com/dflydev/dflydev-markdown">PHP Markdown</a></li>
+        <li><a href="http://getcomposer.org/">Composer</a></li>
+        <li><a href="https://github.com/suin/php-rss-writer">PHP RSS Writer</a></li>
+        <li><a href="http://noodlehaus.github.com/dispatch/">Dispatch</a></li>
+        </ul>
+        <h2>License</h2>
+
+        <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB"><img alt="Creative Commons Licence" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
+
+      <hr>
+
+      <footer>
+        <p>&copy; SiteOctopus. Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB">Creative Commons Attribution-ShareAlike 3.0 Unported License</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+
   </body>
 </html>
