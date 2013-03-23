@@ -32,7 +32,7 @@
 			<li><a href="http://daringfireball.net/projects/markdown/">Markdown Help</a></li>
 			<li><a href="https://github.com/SiteOctopus/Light-Blog">Github Page</a></li>
 		</ul>
-
+		<!-- End custom sidebar-->
 		<p class="author"><?php echo config('blog.authorbio') ?></p>
 
 	</aside>
