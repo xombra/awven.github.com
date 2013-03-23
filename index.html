@@ -74,11 +74,11 @@
         <p>Make sure that there's a file called <code>.htaccess</code>. If not create one containing this code:</p>
 
         <pre><code>
-        RewriteEngine On
-        RewriteCond %{REQUEST_FILENAME} !-f
-        RewriteCond %{REQUEST_FILENAME} !-d
-        RewriteCond $1 !^(index\.php)
-        RewriteRule ^(.*)$ index.php/$1 [L]
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php)
+RewriteRule ^(.*)$ index.php/$1 [L]
         </code></pre>
         </li>
         <li><p>Now open <code>app/config.ini</code> in your favourite text editor. Change the <code>site.url</code> variable to the location of index.php. For example: <code>http://example.com</code> or <code>http://example.com/folder/</code>. Just remember to include a trailing slash</p></li>
