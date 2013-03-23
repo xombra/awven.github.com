@@ -2,7 +2,7 @@
 	<div class="post">
 		<h2><a href="<?php echo $p->url?>"><?php echo $p->title ?></a></h2>
 
-		<div class="date"><?php echo date('d F Y', $p->date)?></div>
+		<div class="date"><?php echo @date('d F Y', $p->date)?></div>
 
 		<?php echo $p->body?>
 	</div>

@@ -293,7 +293,7 @@ function render($view, $locals = null, $layout = null) {
 
     $layout = "{$view_root}/{$layout}.html.php";
 
-    header('Content-type: text/html; charset=utf-8');
+    @header('Content-type: text/html; charset=utf-8');
 
     ob_start();
     require $layout;

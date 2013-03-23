@@ -44,10 +44,10 @@ function get_posts($page = 1, $perpage = 0){
 
 		// Extract the date
 		$arr = explode('_', $v);
-		$post->date = strtotime(str_replace('posts/','',$arr[0]));
+		$post->date = @strtotime(str_replace('posts/','',$arr[0]));
 
 		// The post URL
-		$post->url = site_url().date('Y/m', $post->date).'/'.str_replace('.md','',$arr[1]);
+		$post->url = site_url().@date('Y/m', $post->date).'/'.str_replace('.md','',$arr[1]);
 
 		// Get the contents and convert it to HTML
 		$content = $md->transformMarkdown(file_get_contents($v));

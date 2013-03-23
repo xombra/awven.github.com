@@ -1,5 +1,5 @@
-<?php
 
+<?php
 // This is the composer autoloader. Used by
 // the markdown parser and RSS feed builder.
 require 'vendor/autoload.php';
@@ -14,22 +14,22 @@ config('source', 'app/config.ini');
 
 // The front page of the blog.
 // This will match the root url
-get('/index', function () {
+get('/index', function(){
 
 	$page = from($_GET, 'page');
 	$page = $page ? (int)$page : 1;
-	
+
 	$posts = get_posts($page);
-	
+
 	if(empty($posts) || $page < 1){
-		// a non-existing page
-		not_found();
-	}
-	
-    render('main',array(
-	'page' => $page,
-	'posts' => $posts,
-	'has_pagination' => has_pagination($page)
+ 		// a non-existing page
+ 		not_found();
+ 	}
+
+     render('main',array(
+     	'page' => $page,
+		'posts' => $posts,
+		'has_pagination' => has_pagination($page)
 	));
 });
 
@@ -42,7 +42,7 @@ get('/:year/:month/:name',function($year, $month, $name){
 		not_found();
 	}
 
-	render('post',array(
+	render('post', array(
 		'title' => $post->title .' ⋅ ' . config('blog.title'),
 		'p' => $post
 	));
@@ -66,7 +66,6 @@ get('/rss',function(){
 	echo generate_rss(get_posts(1, 30));
 });
 
-
 // If we get here, it means that
 // nothing has been matched above
 
@@ -76,3 +75,4 @@ get('.*',function(){
 
 // Serve the blog
 dispatch();
+?>

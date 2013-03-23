@@ -28,9 +28,10 @@
 		<!-- the sidebar-->
 		<ul>
 			<li><a href="<?php echo site_url() ?>">Home</a></li>
-			<li>Heads up! To edit this sidebar go to app/views/layout.html.php . You can also change lots of other stuff here as well</li>
-			<li><a href="http://daringfireball.net/projects/markdown/">Markdown Help</a></li>
+			<li><a href="https://github.com/SiteOctopus/Light-Blog/zipball/master">Zip download</a></li>
+			<li><a href="https://github.com/SiteOctopus/Light-Blog/tarball/master">tar.gz download</a></li>
 			<li><a href="https://github.com/SiteOctopus/Light-Blog">Github Page</a></li>
+			<li><a href="http://siteoctopus.github.com/Light-Blog/">Our Site</a></li>
 		</ul>
 		<!-- End custom sidebar-->
 		<p class="author"><?php echo config('blog.authorbio') ?></p>
