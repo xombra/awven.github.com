@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640" />
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Light Blog by SiteOctopus</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/SiteOctopus/Light-Blog">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Light Blog</h1>
+            <h2>A super light Markdown based blog</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/SiteOctopus/Light-Blog/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/SiteOctopus/Light-Blog/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>lightblog</h1>
+
+<p>Why use light blog over Wordpress or Drupal?
+1. It's simple
+2. It doesn't need a database
+4. It's lightweight
+5. No installation required, just drag and drop files</p>
+
+<h2>Installation in 10 simple steps</h2>
+
+<ol>
+<li><p>First of all get yourself a copy of the files by clicking <a href="https://github.com/SiteOctopus/Light-Blog/zipball/master">here (.zip)</a> or by git cloning</p></li>
+<li><p>Now you need to install the whole folder onto your <em>linux</em> webserver.</p></li>
+<li>
+<p>Make sure that there's a file called <code>.htaccess</code>. If not create one containing this code:</p>
+
+<pre><code>RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php)
+RewriteRule ^(.*)$ index.php/$1 [L]
+</code></pre>
+</li>
+<li><p>Now open <code>app/config.ini</code> in your favourite text editor. Change the <code>site.url</code> variable to the location of index.php. For example: <code>http://example.com</code> or <code>http://example.com/folder/</code>. Just remember to include a trailing slash</p></li>
+<li><p>Change the blog info to match your blog. Now save the file back onto your webserver</p></li>
+<li><p>Now open <code>app/views/layout.html.php</code>. You'll see some HTML code. Between the code <code>&lt;!-- the sidebar--&gt;</code> and <code>&lt;!--End custom sidebar--&gt;</code> you can add whatever you want. We've put a <code>&lt;ul&gt;</code> list in for you, but you can have anything!</p></li>
+<li><p>Now create you first post using Markdown. The syntax help is <a href="http://daringfireball.net/projects/markdown/syntax">here</a>. You <em>must</em> begin your document with 
+<code>#Title here</code>
+otherwise it won't work!</p></li>
+<li><p>Call your file:
+YYYY-MM-DD_a-title.md</p></li>
+<li><p>Now refresh the page</p></li>
+<li><p>Your blog is complete!</p></li>
+</ol><h2>Credits</h2>
+
+<p>Making light blog wouldn't have been possible without (in no particular order...)</p>
+
+<ul>
+<li><a href="https://github.com/dflydev/dflydev-markdown">PHP Markdown</a></li>
+<li><a href="http://getcomposer.org/">Composer</a></li>
+<li><a href="https://github.com/suin/php-rss-writer">PHP RSS Writer</a></li>
+<li><a href="http://noodlehaus.github.com/dispatch/">Dispatch</a></li>
+</ul><h2>License</h2>
+
+<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB"><img alt="Creative Commons Licence" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/SiteOctopus">SiteOctopus</a> can be found on <a href="https://github.com/SiteOctopus/Light-Blog">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
